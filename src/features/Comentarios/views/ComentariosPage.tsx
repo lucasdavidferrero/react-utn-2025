@@ -10,6 +10,12 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
+import Stack from '@mui/material/Stack';
+import IconButton from '@mui/material/IconButton';
+import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+
+
 export default function ComentariosPage() {
     const [datos, setDatos] = useState<Comentario[]>([])
     const [cargando, setCargando] = useState(true)
@@ -58,6 +64,16 @@ export default function ComentariosPage() {
                                     key={fila.id}
                                     sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                                 >
+                                    <TableCell>
+                                        <Stack direction="row" spacing={1}>
+                                            <IconButton color="primary">
+                                                <EditOutlinedIcon />
+                                            </IconButton>
+                                            <IconButton>
+                                                <DeleteOutlineOutlinedIcon />
+                                            </IconButton>
+                                        </Stack>
+                                    </TableCell>
                                     <TableCell component="th" scope="row">
                                         {fila.id}
                                     </TableCell>
