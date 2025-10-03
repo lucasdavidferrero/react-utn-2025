@@ -7,13 +7,12 @@ export default function ProductosPage() {
         async function fn () {
             const resultado = await ProductosService.obtenerProductos()
             setProductos(resultado)
-        } 
+        }
         fn()
     }, [])
     return (
         <>
             <h2>Productos</h2>
-            <div>{ productos && productos.map((el) => <li>{el}</li>)  }</div>
         </>
     )
 }
