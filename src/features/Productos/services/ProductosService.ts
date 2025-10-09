@@ -5,7 +5,6 @@ import type { Producto } from "./../types/ProductoTypes.ts"
 export class ProductosService {
 
     static async crearProducto (dto: ProductoCrearDto) {
-        // Enviar Request a la API WEB.
         const result = await api.post('/api/producto', dto)
         return result
     }

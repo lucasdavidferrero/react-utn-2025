@@ -1,6 +1,17 @@
 export interface ProductoCrearDto {
-    nombre: string
+    titulo: string
     precio: number
+    descripcion: string
+    slug: string
+    stock: number
+}
+
+export interface ProductoCrearForm {
+    titulo: string
+    precio: string
+    descripcion: string
+    slug: string
+    stock: string
 }
 
 export interface ProductoActualizarDto {
